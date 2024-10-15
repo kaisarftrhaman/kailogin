@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Service Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .animate-button {
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .animate-button:hover {
+            transform: translateY(-2px);
+            background-color: #3b82f6; /* Blue-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="relative text-center text-white">
+        <img alt="Person typing on a keyboard with service-related icons" class="w-full h-auto opacity-50" src="https://imgur.com/hj1o2l3.jpg"/>
+        <div class="absolute inset-0 flex flex-col items-center justify-center space-y-4">
+            <div class="absolute top-4 left-4">
+                <img alt="MonsterMAC logo" class="w-32" src="https://placehold.co/150x50"/>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-4">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-envelope text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-plane text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-thumbs-up text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-headset text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-search text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-cogs text-4xl"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-phone text-4xl"></i>
+                </div>
+            </div>
+            <div class="text-6xl font-bold">SERVICE</div>
+            <div class="text-2xl">SUPPORT</div>
+            <button id="goHomeButton" class="animate-button bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-200">
+                Go to Home
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('goHomeButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Redirect to login.html
+        });
+    </script>
+</body>
+</html>

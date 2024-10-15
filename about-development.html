@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Instagram Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .animate-back {
+            transition: transform 0.2s;
+        }
+        .animate-back:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div class="text-center">
+        <h1 class="text-3xl font-bold mb-4">Follow Me on Instagram</h1>
+        <a href="https://www.instagram.com/kaisarftrhaman" target="_blank" id="instagramLogo" class="text-6xl hover:text-pink-500 transition duration-200">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p class="mt-2 text-xl">@kaisarftrhaman</p>
+    </div>
+
+    <button id="backButton" class="mt-8 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 animate-back">
+        Back
+    </button>
+
+    <script>
+        document.getElementById('instagramLogo').addEventListener('click', function() {
+            alert('You are about to visit my Instagram profile!');
+        });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Redirect to login.html
+        });
+    </script>
+</body>
+</html>

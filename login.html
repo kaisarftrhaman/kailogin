@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SPACEMAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-6">
+        <div id="usernameDisplay" class="text-lg font-bold">
+            KAISAR FATTURAHMAN <!-- Default name -->
+        </div>
+        <nav class="space-x-6">
+            <a id="projectsButton" class="text-gray-400 hover:text-white cursor-pointer">
+                Social Media
+            </a>
+            <a id="servicesButton" class="text-gray-400 hover:text-white cursor-pointer">
+                Services
+            </a>
+        </nav>
+    </header>
+    <main class="flex flex-col md:flex-row items-center justify-center min-h-screen p-6">
+        <div class="md:w-1/2 space-y-6">
+            <h1 class="text-4xl font-bold animate-text">
+                Hey, Welcome <span id="userName"></span>
+            </h1>
+            <p class="text-gray-400">
+             This Project In Progress, Dont Distrub.
+            </p>
+            <button id="projectHereButton" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">
+                Project Here
+            </button>
+        </div>
+        <div class="md:w-1/2 mt-6 md:mt-0 md:ml-6">
+            <img alt="Portrait of Kaisar, a web designer and developer, smiling and wearing glasses and a sweater" class="rounded-lg shadow-lg w-96 h-auto" src="https://imgur.com/fEIrMhD.jpg" />
+        </div>
+    </main>
+    
+    <script>
+        // Ambil username dari localStorage dan tampilkan
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('usernameDisplay').textContent = username;
+            document.getElementById('userName').textContent = username;
+        }
+
+        // JavaScript function to handle button clicks
+        document.getElementById('projectHereButton').addEventListener('click', function() {
+            window.location.href = 'projects.html'; // Change this to your projects page
+        });
+
+        document.getElementById('servicesButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            window.location.href = 'services.html'; // Change this to your services page
+        });
+
+        document.getElementById('projectsButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            window.location.href = 'about-development.html'; // Change this to your about development page
+        });
+    </script>
+</body>
+</html>

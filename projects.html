@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        body {
+            font-family: 'Permanent Marker', cursive;
+        }
+    </style>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen">
+    <div class="relative w-full max-w-2xl p-8">
+        <div class="absolute top-0 left-0 flex items-center space-x-2">
+            <i class="fas fa-question text-orange-500"></i>
+            <span class="text-black">Ask Relevant Research Questions</span>
+        </div>
+        <div class="absolute top-0 right-0 flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt text-orange-500"></i>
+            <span class="text-black">Identify Where the Data Is</span>
+        </div>
+        <div class="absolute top-16 left-0 flex items-center space-x-2">
+            <i class="fas fa-users text-orange-500"></i>
+            <span class="text-black">Team, Skills</span>
+        </div>
+        <div class="absolute top-16 right-0 flex items-center space-x-2">
+            <i class="fas fa-tasks text-orange-500"></i>
+            <span class="text-black">Planning: Expected Outcome, Measure of Success</span>
+        </div>
+        <div class="absolute top-32 left-0 flex items-center space-x-2">
+            <i class="fas fa-palette text-orange-500"></i>
+            <span class="text-black">Styles of Working</span>
+        </div>
+        <div class="absolute top-32 right-0 flex items-center space-x-2">
+            <i class="fas fa-project-diagram text-orange-500"></i>
+            <span class="text-black">Project Mgmt</span>
+        </div>
+        <div class="flex justify-center mt-24">
+            <img alt="Illustration of people working on a project" class="w-48 h-48" height="200" src="https://storage.googleapis.com/a1aa/image/ezxguOfpeSN5eRhWOMWqYeXftmkt9Cfp3UrHvse1eP6Za8iNnA.jpg" width="200"/>
+        </div>
+        <div class="text-center mt-8">
+            <span class="text-orange-500 text-4xl">KAISAR</span>
+            <span class="text-orange-500 text-4xl block">FATTURAHMAN</span>
+        </div>
+        <div class="flex justify-center mt-6">
+            <button id="backButton" class="bg-gray-600 text-white px-6 py-2 rounded-full hover:bg-gray-700">
+                Back to Menu
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to handle back button click
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Navigate back to login.html
+        });
+    </script>
+</body>
+</html>

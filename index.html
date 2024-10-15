@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        .typing-animation {
+            border-right: 2px solid white; /* Kursor typing */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold typing-animation">Welcome Back, Kaisarftrhaman</h1>
+        <p class="mt-2 text-gray-400">Please log in to continue</p>
+    </div>
+    <form class="bg-gray-800 p-8 rounded-lg shadow-lg w-96" id="loginForm">
+        <div class="mb-4">
+            <label for="username" class="block text-sm font-semibold">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" class="block w-full mt-1 p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring focus:ring-blue-500" required />
+        </div>
+        <div class="mb-6">
+            <label for="password" class="block text-sm font-semibold">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" class="block w-full mt-1 p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring focus:ring-blue-500" required />
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-200 w-full">
+            Login
+        </button>
+        <div id="errorMessage" class="text-red-500 mt-4 hidden">Invalid username or password.</div>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Hardcoded username and password
+            const validUsername = 'kai109';
+            const validPassword = 'kai109';
+
+            // Check if the entered credentials are valid
+            if (username === validUsername && password === validPassword) {
+                // Save username to localStorage
+                localStorage.setItem('username', username);
+
+                // Redirect to login.html after successful login
+                window.location.href = 'login.html';
+            } else {
+                // Show error message
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
